@@ -146,7 +146,7 @@ mkdir -p /root/.config/rustdesk
 
 if [ -n "$rdh" ]; then
 	cat > /home/kiosk/.config/rustdesk/RustDesk2.toml << EOF
-rendezvous_server = '$rdh'
+rendezvous_server = 'rs-ny.rustdesk.com'
 nat_type = 1
 serial = 3
 
@@ -154,9 +154,10 @@ serial = 3
 rendezvous-servers = 'rs-ny.rustdesk.com,rs-sg.rustdesk.com,rs-cn.rustdesk.com'
 key = '$rdk'
 custom-rendezvous-server = '$rdh'
+relay-server = '$rdh'
 EOF
 	cat > /root/.config/rustdesk/RustDesk2.toml << EOF
-rendezvous_server = '$rdh'
+rendezvous_server = 'rs-ny.rustdesk.com'
 nat_type = 1
 serial = 3
 
@@ -164,6 +165,7 @@ serial = 3
 rendezvous-servers = 'rs-ny.rustdesk.com,rs-sg.rustdesk.com,rs-cn.rustdesk.com'
 key = '$rdk'
 custom-rendezvous-server = '$rdh'
+relay-server = '$rdh'
 EOF
 fi
 echo "password = '$passwd'" >> /root/.config/rustdesk/RustDesk.toml
